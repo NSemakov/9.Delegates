@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
+#import "Patient.h"
+#import "Doctor.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +18,27 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    // Uchenik
+    Doctor* doctor=[Doctor new];
+    
+    Patient* patient1=[[Patient alloc] initWithName:@"Ivan"];
+    patient1.temp=41.f;
+    patient1.delegate=doctor;
+    Patient* patient2=[[Patient alloc] initWithName:@"Petr"];
+    patient2.temp=37.f;
+    patient2.delegate=doctor;
+    Patient* patient3=[[Patient alloc] initWithName:@"Maria"];
+    patient3.temp=35.f;
+    patient3.delegate=doctor;
+    
+    
+    NSArray *patientsArray=[NSArray arrayWithObjects:patient1, patient2, patient3, nil];
+    for (Patient *obj in patientsArray) {
+        [obj go2Doctor];
+    }
+    
+    //----------
+    //end of Uchenik
     return YES;
 }
 

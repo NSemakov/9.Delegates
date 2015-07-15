@@ -14,6 +14,8 @@
 		84A1481D1B570F1600606DBD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84A1481C1B570F1600606DBD /* Images.xcassets */; };
 		84A148201B570F1600606DBD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84A1481E1B570F1600606DBD /* LaunchScreen.xib */; };
 		84A1482C1B570F1600606DBD /* ___DelegatesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A1482B1B570F1600606DBD /* ___DelegatesTests.m */; };
+		84A148371B57126C00606DBD /* Patient.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A148361B57126C00606DBD /* Patient.m */; };
+		84A1483A1B57127A00606DBD /* Doctor.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A148391B57127A00606DBD /* Doctor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		84A148251B570F1600606DBD /* 9. DelegatesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "9. DelegatesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A1482A1B570F1600606DBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84A1482B1B570F1600606DBD /* ___DelegatesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "___DelegatesTests.m"; sourceTree = "<group>"; };
+		84A148351B57126C00606DBD /* Patient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Patient.h; sourceTree = "<group>"; };
+		84A148361B57126C00606DBD /* Patient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Patient.m; sourceTree = "<group>"; };
+		84A148381B57127A00606DBD /* Doctor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Doctor.h; sourceTree = "<group>"; };
+		84A148391B57127A00606DBD /* Doctor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Doctor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,10 @@
 			children = (
 				84A148131B570F1600606DBD /* AppDelegate.h */,
 				84A148141B570F1600606DBD /* AppDelegate.m */,
+				84A148351B57126C00606DBD /* Patient.h */,
+				84A148361B57126C00606DBD /* Patient.m */,
+				84A148381B57127A00606DBD /* Doctor.h */,
+				84A148391B57127A00606DBD /* Doctor.m */,
 				84A148161B570F1600606DBD /* ViewController.h */,
 				84A148171B570F1600606DBD /* ViewController.m */,
 				84A148191B570F1600606DBD /* Main.storyboard */,
@@ -220,8 +230,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				84A148181B570F1600606DBD /* ViewController.m in Sources */,
+				84A148371B57126C00606DBD /* Patient.m in Sources */,
 				84A148151B570F1600606DBD /* AppDelegate.m in Sources */,
 				84A148121B570F1600606DBD /* main.m in Sources */,
+				84A1483A1B57127A00606DBD /* Doctor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

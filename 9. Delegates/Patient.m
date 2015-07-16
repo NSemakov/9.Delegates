@@ -20,7 +20,9 @@
 -(void) go2Doctor{
     [self.delegate feelWorse:self];
 }
-
+-(void) go2DoctorWIthAche{
+    [self.delegate haveAche:self];
+}
 -(void) takePill{
     NSLog(@"patient %@ takes a pill",self.name);
 }

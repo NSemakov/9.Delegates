@@ -1,5 +1,5 @@
 //
-//  Doctor.h
+//  FriendOfDoctor.h
 //  9. Delegates
 //
 //  Created by Admin on 16.07.15.
@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "Patient.h"
-@interface Doctor : NSObject <PatientDelegate>
+@interface FriendOfDoctor : NSObject <PatientDelegate>
 @property (strong,nonatomic) NSMutableArray *report;
+-(void) putPlantain;
+-(void) perspireInSauna;
 -(void) makeReport;
 @end

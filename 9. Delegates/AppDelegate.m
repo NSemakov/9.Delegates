@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "Patient.h"
 #import "Doctor.h"
+#import "FriendOfDoctor.h"
 @interface AppDelegate ()
 
 @end
@@ -24,13 +25,15 @@
     Patient* patient1=[[Patient alloc] initWithName:@"Ivan"];
     patient1.temp=41.f;
     patient1.delegate=doctor;
+    patient1.part=BodyPartHead;
     Patient* patient2=[[Patient alloc] initWithName:@"Petr"];
     patient2.temp=37.f;
     patient2.delegate=doctor;
+    patient2.part=BodyPartHead;
     Patient* patient3=[[Patient alloc] initWithName:@"Maria"];
     patient3.temp=35.f;
     patient3.delegate=doctor;
-    
+    patient3.part=BodyPartLeg;
     
     NSArray *patientsArray=[NSArray arrayWithObjects:patient1, patient2, patient3, nil];
     for (Patient *obj in patientsArray) {
@@ -39,6 +42,45 @@
     
     //----------
     //end of Uchenik
+    
+    //Student
+    FriendOfDoctor* friendOfDoc1=[FriendOfDoctor new];
+    Patient* patient4=[[Patient alloc] initWithName:@"Natalia"];
+    patient4.temp=41.f;
+    patient4.delegate=friendOfDoc1;
+    patient4.part=BodyPartHead;
+    Patient* patient5=[[Patient alloc] initWithName:@"Svetlana"];
+    patient5.temp=37.f;
+    patient5.delegate=friendOfDoc1;
+    patient5.part=BodyPartLeg;
+    Patient* patient6=[[Patient alloc] initWithName:@"John"];
+    patient6.temp=35.f;
+    patient6.delegate=friendOfDoc1;
+    patient6.part=BodyPartHead;
+
+    NSArray *patientsArray2=[NSArray arrayWithObjects:patient1, patient2, patient3,
+                             patient4, patient5, patient6,nil];
+    for (Patient *obj in patientsArray2) {
+        [obj go2Doctor];
+    }
+    //--------
+    //end of Student
+    
+    //Master
+    for (Patient *obj in patientsArray2) {
+        [obj go2DoctorWIthAche];
+        
+    }
+    [doctor makeReport];
+    [friendOfDoc1 makeReport];
+    //--------
+    //end of Master
+    
+    //Superman
+    
+    
+    
+    
     return YES;
 }
 

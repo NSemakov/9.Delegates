@@ -18,18 +18,25 @@
     return self;
 }
 -(void) go2Doctor{
-    [self.delegate feelWorse:self];
+    [self.doctorDelegate feelWorse:self];
 }
 -(void) go2DoctorWIthAche{
-    [self.delegate haveAche:self];
+    [self.doctorDelegate haveAche:self];
 }
 -(void) takePill{
     NSLog(@"patient %@ takes a pill",self.name);
+    [self decisionIfHelp];
+    
 }
 -(void) makeShot{
     NSLog(@"patient %@ makes a shot",self.name);
+    [self decisionIfHelp];
 }
 -(void) haveRest{
     NSLog(@"patient %@ should have rest",self.name);
+    [self decisionIfHelp];
+}
+-(void) decisionIfHelp{
+    self.isHelped=arc4random_uniform(2);
 }
 @end

@@ -14,20 +14,22 @@ typedef NS_ENUM(NSInteger, BodyPart){
 };
 @protocol PatientDelegate;
 @interface Patient : NSObject
-@property (weak,nonatomic) id <PatientDelegate> delegate;
+@property (weak,nonatomic) id <PatientDelegate> doctorDelegate;
+@property (weak,nonatomic) id x;
 @property (assign,nonatomic) CGFloat temp;
 @property (strong,nonatomic) NSString *name;
 @property (assign,nonatomic) BodyPart part;
-
+@property (assign,nonatomic) BOOL isHelped;
 - (instancetype)initWithName:(NSString*)name;
 -(void) takePill;
 -(void) makeShot;
 -(void) haveRest;
 -(void) go2Doctor;
 -(void) go2DoctorWIthAche;
+-(void) decisionIfHelp;
 @end
 
-@protocol PatientDelegate
+@protocol PatientDelegate <NSObject>
 
 -(void) feelWorse:(Patient*) patient;
 -(void) haveAche:(Patient*) patient;

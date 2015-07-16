@@ -63,6 +63,7 @@
                 break;
             case BodyPartLeg:
                 bodyPartInString=@"leg";
+                break;
             default:
                 bodyPartInString=@"error. no such body part in enum";
                 break;
